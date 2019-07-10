@@ -474,30 +474,32 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Big Nerd Ranch";
 				TargetAttributes = {
 					DB6ADF1E1C23610B00D77BF1 = {
 						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1010;
 					};
 					DB6ADF281C23610B00D77BF1 = {
 						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1010;
 					};
 					DB6ADF3D1C23612000D77BF1 = {
 						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1010;
 					};
 					DB6ADF461C23612000D77BF1 = {
 						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1010;
 					};
 					DB6ADF591C23612900D77BF1 = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 1010;
 					};
 					DB6ADF621C23612A00D77BF1 = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 1010;
 					};
 					DB6ADF751C23613200D77BF1 = {
 						CreatedOnToolsVersion = 7.2;
@@ -736,7 +738,9 @@
 			buildSettings = {
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -752,11 +756,14 @@
 			buildSettings = {
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
 		};
@@ -765,6 +772,8 @@
 			baseConfigurationReference = DB6ADF811C23617500D77BF1 /* Framework.xcconfig */;
 			buildSettings = {
 				SDKROOT = iphoneos;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -775,6 +784,8 @@
 			buildSettings = {
 				CLANG_ENABLE_CODE_COVERAGE = NO;
 				SDKROOT = iphoneos;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -783,8 +794,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DB6ADF831C23617500D77BF1 /* Tests.xcconfig */;
 			buildSettings = {
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Tests/FreddyTests/Info.plist;
 				SDKROOT = iphoneos;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -792,8 +806,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DB6ADF831C23617500D77BF1 /* Tests.xcconfig */;
 			buildSettings = {
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Tests/FreddyTests/Info.plist;
 				SDKROOT = iphoneos;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -802,7 +819,8 @@
 			baseConfigurationReference = DB6ADF811C23617500D77BF1 /* Framework.xcconfig */;
 			buildSettings = {
 				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -812,7 +830,8 @@
 			buildSettings = {
 				CLANG_ENABLE_CODE_COVERAGE = NO;
 				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -820,9 +839,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DB6ADF831C23617500D77BF1 /* Tests.xcconfig */;
 			buildSettings = {
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Tests/FreddyTests/Info.plist;
 				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -830,9 +851,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DB6ADF831C23617500D77BF1 /* Tests.xcconfig */;
 			buildSettings = {
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Tests/FreddyTests/Info.plist;
 				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -841,6 +864,8 @@
 			baseConfigurationReference = DB6ADF811C23617500D77BF1 /* Framework.xcconfig */;
 			buildSettings = {
 				SDKROOT = appletvos;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Debug;
@@ -851,6 +876,8 @@
 			buildSettings = {
 				CLANG_ENABLE_CODE_COVERAGE = NO;
 				SDKROOT = appletvos;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Release;
@@ -859,8 +886,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DB6ADF831C23617500D77BF1 /* Tests.xcconfig */;
 			buildSettings = {
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Tests/FreddyTests/Info.plist;
 				SDKROOT = appletvos;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -868,8 +898,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DB6ADF831C23617500D77BF1 /* Tests.xcconfig */;
 			buildSettings = {
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Tests/FreddyTests/Info.plist;
 				SDKROOT = appletvos;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
