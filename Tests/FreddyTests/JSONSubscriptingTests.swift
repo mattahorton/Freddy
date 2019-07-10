@@ -473,24 +473,24 @@ private func testUsage() {
     let j = JSON.null
     
     _ = try? j.getInt()
-    _ = try? j.getInt(alongPath: .missingKeyBecomesNil)
-    _ = try? j.getInt(alongPath: .nullBecomesNil)
+    _ = ((try? j.getInt(alongPath: .missingKeyBecomesNil)) as Int??)
+    _ = ((try? j.getInt(alongPath: .nullBecomesNil)) as Int??)
     _ = try? j.getInt(or: 42)
     
     _ = try? j.getInt(at: "key")
-    _ = try? j.getInt(at: "key", alongPath: .missingKeyBecomesNil)
-    _ = try? j.getInt(at: "key", alongPath: .nullBecomesNil)
+    _ = ((try? j.getInt(at: "key", alongPath: .missingKeyBecomesNil)) as Int??)
+    _ = ((try? j.getInt(at: "key", alongPath: .nullBecomesNil)) as Int??)
     _ = try? j.getInt(at: "key", or: 42)
     
     _ = try? j.getInt(at: 1)
-    _ = try? j.getInt(at: 2, alongPath: .missingKeyBecomesNil)
-    _ = try? j.getInt(at: 3, alongPath: .nullBecomesNil)
+    _ = ((try? j.getInt(at: 2, alongPath: .missingKeyBecomesNil)) as Int??)
+    _ = ((try? j.getInt(at: 3, alongPath: .nullBecomesNil)) as Int??)
     _ = try? j.getInt(at: 4, or: 42)
     
     let stringConst = "key"
     
     _ = try? j.getInt(at: stringConst, 1)
-    _ = try? j.getInt(at: stringConst, 2, alongPath: .missingKeyBecomesNil)
-    _ = try? j.getInt(at: stringConst, 3, alongPath: .nullBecomesNil)
+    _ = ((try? j.getInt(at: stringConst, 2, alongPath: .missingKeyBecomesNil)) as Int??)
+    _ = ((try? j.getInt(at: stringConst, 3, alongPath: .nullBecomesNil)) as Int??)
     _ = try? j.getInt(at: stringConst, 4, or: 42)
 }

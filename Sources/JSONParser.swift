@@ -813,11 +813,13 @@ public extension JSONParser {
 
     /// Creates an instance of `JSON` from UTF-8 encoded `data`.
     static func parse(utf8 data: Data) throws -> JSON {
-        return try data.withUnsafeBytes { (ptr: UnsafePointer<UInt8>) -> JSON in
-            let buffer = UnsafeBufferPointer(start: ptr, count: data.count)
+        return try data.withUnsafeBytes({ ptr -> JSON in
+            let unsafeBufferPointer = ptr.bindMemory(to: UInt8.self)
+            let unsafePointer = unsafeBufferPointer.baseAddress
+            let buffer = UnsafeBufferPointer(start: unsafePointer, count: data.count)
             var parser = JSONParser(input: buffer)
             return try parser.parse()
-        }
+        })
     }
 
     /// Creates an instance of `JSON` from `string`.

@@ -57,7 +57,7 @@ extension Int: JSONDecodable {
             self = int
         } else if case let .string(string) = json,
             let double = Double(string),
-            let decimalSeparator = string.index(of: "."),
+            let decimalSeparator = string.firstIndex(of: "."),
             let int = Int(String(string.prefix(upTo: decimalSeparator))),
             double == Double(int) {
             self = int
