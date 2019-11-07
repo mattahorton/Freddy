@@ -16,11 +16,11 @@ let package = Package(
         .library(name: "Freddy", targets: ["NanoFreddy"])
     ],
     targets: [
-        .target(name: "Freddy"),
-        .target(name: "MobileFreddy"),
-        .target(name: "TVFreddy"),
-        .target(name: "NanoFreddy"),
-        .testTarget(name: "FreddyTests", dependencies: ["Freddy"])
+        .target(name: "Freddy", dependencies: [], path: "Sources"),
+        .target(name: "MobileFreddy", dependencies: [], path: "Sources"),
+        .target(name: "TVFreddy", dependencies: [], path: "Sources"),
+        .target(name: "NanoFreddy", dependencies: [], path: "Sources"),
+        .testTarget(name: "FreddyTests", dependencies: ["Freddy"], path: "Test/FreddyTests")
     ]
 )
 
