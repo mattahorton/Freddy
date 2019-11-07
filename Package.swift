@@ -11,15 +11,9 @@ let package = Package(
     ],
     products: [
         .library(name: "Freddy", targets: ["Freddy"]),
-        .library(name: "Freddy", targets: ["MobileFreddy"]),
-        .library(name: "Freddy", targets: ["TVFreddy"]),
-        .library(name: "Freddy", targets: ["NanoFreddy"])
     ],
     targets: [
         .target(name: "Freddy", dependencies: [], path: "Sources"),
-        .target(name: "MobileFreddy", dependencies: [], path: "Sources"),
-        .target(name: "TVFreddy", dependencies: [], path: "Sources"),
-        .target(name: "NanoFreddy", dependencies: [], path: "Sources"),
         .testTarget(name: "FreddyTests", dependencies: ["Freddy"], path: "Tests/FreddyTests")
     ]
 )
