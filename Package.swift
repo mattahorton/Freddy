@@ -20,7 +20,7 @@ let package = Package(
         .target(name: "MobileFreddy", dependencies: [], path: "Sources"),
         .target(name: "TVFreddy", dependencies: [], path: "Sources"),
         .target(name: "NanoFreddy", dependencies: [], path: "Sources"),
-        .testTarget(name: "FreddyTests", dependencies: ["Freddy"], path: "Test/FreddyTests")
+        .testTarget(name: "FreddyTests", dependencies: ["Freddy"], path: "Tests/FreddyTests")
     ]
 )
 
